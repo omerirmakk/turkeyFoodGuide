@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .sehir-adi {
-  @apply bg-slate-800 rounded-lg absolute py-4 px-6 opacity-0 invisible text-slate-300 text-base;
+  @apply bg-neutral-200 rounded-lg absolute py-4 px-6 opacity-0 invisible text-slate-900 text-base;
 }
 .aktif {
   @apply opacity-100 visible;
 }
 .city {
-  @apply fill-lime-200 opacity-100 stroke-white stroke-1 transition-all duration-300 ease-out cursor-pointer hover:fill-gray-900;
+  @apply fill-red-700 opacity-100 stroke-white stroke-1 transition-all duration-700 ease-out cursor-pointer hover:fill-gray-900;
 }

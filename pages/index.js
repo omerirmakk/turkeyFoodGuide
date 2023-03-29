@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect } from 'react';
-
 import Layout from '@/components/Layout';
 import { useRouter } from 'next/router';
+import MainTitle from '@/components/MainTitle';
 
 export default function Home() {
   const router = useRouter();
@@ -15,15 +15,16 @@ export default function Home() {
 
     return () => {
       for (let i = 0; i < svgTurkeyMap.length; i++) {
-        svgTurkeyMap[i].addEventListener('mousemove', function () {
+        svgTurkeyMap[i].addEventListener('mousemove', function (e) {
           cityName.classList.add('sehir-adi', 'aktif');
-          cityName.style.left = event.clientX + 20 + 'px';
-          cityName.style.top = event.clientY + 20 + 'px';
+          cityName.style.left = e.clientX + 20 + 'px';
+          cityName.style.top = e.clientY + 20 + 'px';
           cityName.innerHTML = this.getAttribute('title');
         });
 
         svgTurkeyMap[i].addEventListener('mouseleave', function () {
           cityName.classList.remove('sehir-adi', 'aktif');
+          cityName.textContent = '';
         });
 
         svgTurkeyMap[i].addEventListener('click', function () {
@@ -35,11 +36,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-full mt-4  text-center  bg-slate-800 text-orange-400 ">
+      <div className="w-full h-full text-center bg-transparent  ">
         <div class="wrapper" className="w- mx-auto my-0 px-8 py-auto">
           <h1
             class="site-header__title"
-            className="text-3xl text-center rounded-md font-semibold text-cyan-800"
+            className="text-3xl text-center py-4 rounded-md font-semibold text-orange-600"
           >
             Türkiye Gezilecek Yerler Haritası
           </h1>
@@ -629,11 +630,7 @@ export default function Home() {
               </g>
             </svg>
 
-            <div
-              id="city-name"
-              className="text-orange-800 "
-              class="show-city-name"
-            ></div>
+            <div id="city-name" className="sehir-adi"></div>
           </div>
         </div>
       </div>

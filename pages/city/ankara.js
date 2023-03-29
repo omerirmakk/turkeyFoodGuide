@@ -1,7 +1,12 @@
 import React from 'react';
+import MainTitle from '@/components/MainTitle';
 
 const ankara = () => {
-  return <div>ankara</div>;
+  return (
+    <>
+      <MainTitle>Ankara</MainTitle>
+    </>
+  );
 };
 
 export default ankara;
