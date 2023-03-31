@@ -1,0 +1,50 @@
+{
+  "istanbul": [
+    {
+      "id": 1,
+      "sehirAd": "istanbul",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    },
+    {
+      "id": 2,
+      "sehirAd": "istanbul",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    },
+    {
+      "id": 3,
+      "sehirAd": "istanbul",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    }
+  ],
+
+  "ankara": [
+
+    {
+      "id": 2,
+      "sehirAd": "istanbul",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    }
+  ],
+  "yalova" : [
+
+    {
+      "id": 3,
+      "sehirAd": "Yalova",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    }
+  ],
+  "bursa" : [
+    {
+      "id": 4,
+      "sehirAd": "istanbul",
+      "sehirDesc": "Sehir sehir sehir",
+      "sehirPhoto": "/istanbul.jpg"
+    }
+  ] 
+
+}

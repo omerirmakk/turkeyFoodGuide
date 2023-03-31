@@ -1,34 +1,30 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { useEffect } from 'react';
-import Layout from '@/components/Layout';
-import { useRouter } from 'next/router';
-import MainTitle from '@/components/MainTitle';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
     let svgTurkeyMap = document
-      .getElementById('svg-turkey-map')
-      .getElementsByTagName('path');
-    let cityName = document.getElementById('city-name');
+      .getElementById("svg-turkey-map")
+      .getElementsByTagName("path");
+    let cityName = document.getElementById("city-name");
 
     return () => {
       for (let i = 0; i < svgTurkeyMap.length; i++) {
-        svgTurkeyMap[i].addEventListener('mousemove', function (e) {
-          cityName.classList.add('sehir-adi', 'aktif');
-          cityName.style.left = e.clientX + 20 + 'px';
-          cityName.style.top = e.clientY + 20 + 'px';
-          cityName.innerHTML = this.getAttribute('title');
+        svgTurkeyMap[i].addEventListener("mousemove", function (e) {
+          cityName.classList.add("sehir-adi", "aktif");
+          cityName.style.left = e.clientX + 20 + "px";
+          cityName.style.top = e.clientY + 20 + "px";
+          cityName.innerHTML = this.getAttribute("title");
         });
 
-        svgTurkeyMap[i].addEventListener('mouseleave', function () {
-          cityName.classList.remove('sehir-adi', 'aktif');
-          cityName.textContent = '';
+        svgTurkeyMap[i].addEventListener("mouseleave", function () {
+          cityName.classList.remove("sehir-adi", "aktif");
+          cityName.textContent = "";
         });
 
-        svgTurkeyMap[i].addEventListener('click', function () {
-          router.push(`/city/${this.getAttribute('data-city-name')}`);
+        svgTurkeyMap[i].addEventListener("click", function () {
+          router.push(`/city/${this.getAttribute("data-city-name")}`);
         });
       }
     };
@@ -40,7 +36,7 @@ export default function Home() {
         <div class="wrapper" className="w- mx-auto my-0 px-8 py-auto">
           <h1
             class="site-header__title"
-            className="text-3xl text-center py-4 rounded-md font-semibold text-orange-600"
+            className="text-3xl text-center py-4 rounded-md font-semibold text-gray-900"
           >
             Türkiye Gezilecek Yerler Haritası
           </h1>

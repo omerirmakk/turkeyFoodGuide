@@ -1,13 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
-.sehir-adi {
-  @apply bg-neutral-200 rounded-lg absolute py-4 px-6 opacity-0 invisible text-slate-900 text-base;
+@layer base {
+  div > h1 {
+    font-family: "Roboto Mono", monospace;
+  }
 }
-.aktif {
-  @apply opacity-100 visible;
-}
-.city {
-  @apply fill-red-700 opacity-100 stroke-white stroke-1 transition-all duration-700 ease-out cursor-pointer hover:fill-gray-900;
+@layer components {
+  .sehir-adi {
+    @apply bg-slate-300 rounded-lg absolute py-4 px-6 opacity-0 invisible text-slate-900 text-base;
+  }
+  .aktif {
+    @apply opacity-100 visible;
+  }
+  .city {
+    @apply fill-red-700 opacity-100 stroke-white stroke-1 transition-all duration-700 ease-out cursor-pointer hover:fill-gray-900;
+  }
 }
